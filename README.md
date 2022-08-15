@@ -127,13 +127,13 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
     }
 
     {
-    	"calculator": {
-        "icon": "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
-        "name": "Test",
-        "components": "",
-        "date": "1.1.2022",
-        "variables": ""
-    	}
+        "calculator": {
+            "icon": "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
+            "name": "Test",
+            "components": "",
+            "date": "1.1.2022",
+            "variables": ""
+        }
     }
 
 ### UpdateCalculator
