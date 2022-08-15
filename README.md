@@ -112,6 +112,30 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
       }
     }
 
+#### With variables
+    mutation ($calculator: CreateCalculatorInput!)
+    {
+        createCalculator(createCalculatorInput: $calculator) 
+        {
+            _id
+            icon
+            name
+            variables
+            components
+            date
+        }
+    }
+
+    {
+    	"calculator": {
+        "icon": "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
+        "name": "Test",
+        "components": "",
+        "date": "1.1.2022",
+        "variables": ""
+    	}
+    }
+
 ### UpdateCalculator
 
     mutation 
