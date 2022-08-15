@@ -68,7 +68,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
 ## Queries
 ### GetCalculator
     {
-      calculator(_id:"62fa2f956da80170767371fe")
+      calculator(_id:"62fa4a8f9a7dc177b8760375")
       {
         _id
         icon
@@ -141,7 +141,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
     mutation 
     {
       updateCalculator(updateCalculatorInput: {
-        _id: "62fa2f956da80170767371fe",
+        _id: "62fa4a8f9a7dc177b8760375",
         icon: "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
         name: "Test upraveno",
         components: "",
@@ -162,7 +162,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
 
     mutation 
     {
-      removeCalculator(_id: "62fa2f956da80170767371fe") 
+      removeCalculator(_id: "62fa4a8f9a7dc177b8760375") 
       {
         _id
         icon
