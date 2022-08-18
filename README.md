@@ -22,6 +22,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
     }
 ## Mutations
 ### CreateCategory
+parametry jsou nullable, takže není nutné je zadávat
 
     mutation 
     {
@@ -37,6 +38,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
     }
 
 ### UpdateCategory
+parametry jsou nullable (kromě _id), takže není nutné je zadávat, mění se pouze zadané parametry, ostatní zůstávají na původní hodnotě
 
     mutation 
     {
@@ -67,15 +69,17 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
 # Calculator
 ## Queries
 ### GetCalculator
+
     {
       calculator(_id:"62fa4a8f9a7dc177b8760375")
       {
         _id
         icon
         name
-         variables
+        variables
         components
         date
+        categoryId
       }
     }
 ### GetCalculators
@@ -85,30 +89,33 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
         _id
         icon
         name
-         variables
+        variables
         components
         date
+        categoryId
       }
     }
 ## Mutations
 ### CreateCalculator
+parametry jsou nullable, takže není nutné je zadávat
 
     mutation 
     {
       createCalculator(createCalculatorInput: {
         icon: "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
         name: "Test",
+        categoryId: "62fa29167dae770411a3a4eb",
         components: "",
-        date: "1.1.2022",
         variables: ""
       }) 
       {
         _id
         icon
         name
-         variables
+        variables
         components
         date
+        categoryId
       }
     }
 
@@ -123,6 +130,7 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
             variables
             components
             date
+            categoryId
         }
     }
 
@@ -130,13 +138,14 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
         "calculator": {
             "icon": "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
             "name": "Test",
+            "categoryId: "62fa29167dae770411a3a4eb",
             "components": "",
-            "date": "1.1.2022",
             "variables": ""
         }
     }
 
 ### UpdateCalculator
+parametry jsou nullable (kromě _id), takže není nutné je zadávat, mění se pouze zadané parametry, ostatní zůstávají na původní hodnotě
 
     mutation 
     {
@@ -144,17 +153,18 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
         _id: "62fa4a8f9a7dc177b8760375",
         icon: "https://tools.refsite.cz/tool_plyn_na_tc/image004.png",
         name: "Test upraveno",
+        categoryId: "62fa29167dae770411a3a4eb",
         components: "",
-        date: "21.12.2022",
         variables: ""
       }) 
       {
         _id
         icon
         name
-         variables
+        variables
         components
         date
+        categoryId
       }
     }
 
@@ -167,8 +177,9 @@ Příklady dotazů na Graphql backend kalkulaček umístěném na https://refsit
         _id
         icon
         name
-         variables
+        variables
         components
         date
+        categoryId
       }
     }

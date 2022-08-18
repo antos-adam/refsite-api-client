@@ -15,6 +15,7 @@ query GetCalculators
     variables
     components
     date
+    categoryId
   }
 }
 `

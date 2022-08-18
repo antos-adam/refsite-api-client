@@ -13,9 +13,10 @@ const [name, setName] = useState("");
       _id
       icon
       name
-       variables
+      variables
       components
       date
+      categoryId
     }
   }
 `
@@ -29,11 +30,11 @@ const [addCalculator, { data, loading, error }] = useMutation(NEW_CALCULATOR);
       <input placeholder="Calculator name" onChange={e => setName(e.target.value)}></input>
       <button onClick={e=> addCalculator({ variables: {
     	calculator: {
-        icon: "",
+        icon: null,
         name: name,
-        components: "",
-        date: "1.1.2022",
-        variables: ""
+        components: null,
+        variables: null,
+        categoryId: null
     	}
     } })}>New calculator</button>
     </>
