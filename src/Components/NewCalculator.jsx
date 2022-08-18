@@ -20,7 +20,7 @@ const [name, setName] = useState("");
     }
   }
 `
-const [addCalculator, { data, loading, error }] = useMutation(NEW_CALCULATOR);
+const [addCalculator, { loading, error }] = useMutation(NEW_CALCULATOR);
   if (loading) return <p>Saving...</p>;
   if (error) return <p>Error :( {error}</p>;
 
