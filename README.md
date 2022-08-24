@@ -183,3 +183,7 @@ parametry jsou nullable (kromě _id), takže není nutné je zadávat, mění se
         categoryId
       }
     }
+
+# /pdf
+## /download - POST
+## /mail - POST
